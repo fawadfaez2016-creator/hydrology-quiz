@@ -129,18 +129,19 @@ export default function App() {
           </div>
 
           <div className="mt-5">
-            <button
-              className="w-full bg-red-500/20 hover:bg-red-500/30 border border-red-400/30 p-4 rounded-2xl text-left transition-all duration-300"
-            >
-              <div className="text-lg text-red-200">
-                🔥 Special Section
-              </div>
+  <button
+    onClick={() => setSelectedChapter("pastYears")}
+    className="w-full bg-red-500/20 hover:bg-red-500/30 border border-red-400/30 p-4 rounded-2xl text-left transition-all duration-300"
+  >
+    <div className="text-lg text-red-200">
+      🔥 Special Section
+    </div>
 
-              <div className="text-2xl font-bold">
-                Past Year Questions
-              </div>
-            </button>
-          </div>
+    <div className="text-2xl font-bold">
+      Past Year Questions
+    </div>
+  </button>
+</div>
 
         </div>
       </div>
