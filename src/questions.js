@@ -5223,433 +5223,255 @@ export const allQuestions = {
   },
 ],
 pastYears: [
-  {
-    question: "The hydrograph time of rise is defined as:",
-    options: [
-      "Time between peak flow and recession",
-      "Time from rainfall start to hydrograph peak",
-      "Time from rainfall excess start to hydrograph peak",
-      "Time from baseflow separation to runoff end",
-    ],
-    answer: "Time from rainfall excess start to hydrograph peak",
-  },
-
-  {
-    question: "A hyetograph represents:",
-    options: [
-      "Flow rate versus time",
-      "Storage versus discharge",
-      "Rainfall intensity versus time",
-      "Infiltration versus time",
-    ],
-    answer: "Rainfall intensity versus time",
-  },
-
-  {
-    question: "A hydrograph is a plot of:",
-    options: [
-      "Rainfall intensity versus duration",
-      "Flow rate versus time",
-      "Evaporation versus time",
-      "Storage versus rainfall",
-    ],
-    answer: "Flow rate versus time",
-  },
-
-  {
-    question: "The DRO hydrograph is generated using:",
-    options: [
-      "Total rainfall",
-      "Rainfall after evaporation only",
-      "Rainfall excess after infiltration losses",
-      "Groundwater discharge only",
-    ],
-    answer: "Rainfall excess after infiltration losses",
-  },
-
-  {
-    question: "The peak of a hydrograph occurs when:",
-    options: [
-      "Only upstream areas contribute",
-      "Rainfall intensity stops",
-      "All watershed areas contribute to the outlet",
-      "Infiltration becomes zero",
-    ],
-    answer: "All watershed areas contribute to the outlet",
-  },
-
-  {
-    question: "Sherman’s Unit Hydrograph theory assumes:",
-    options: [
-      "1 mm runoff from arbitrary rainfall",
-      "1 mm direct runoff from 1 mm excess rainfall",
-      "Uniform infiltration across all storms",
-      "No storage effects",
-    ],
-    answer: "1 mm direct runoff from 1 mm excess rainfall",
-  },
-
-  {
-    question: "Hydraulic routing is based on solving:",
-    options: [
-      "Continuity equation only",
-      "Momentum equation only",
-      "Continuity and momentum equations",
-      "Darcy equation",
-    ],
-    answer: "Continuity and momentum equations",
-  },
-
-  {
-    question: "Hydrologic routing balances:",
-    options: [
-      "Velocity and pressure",
-      "Rainfall and infiltration",
-      "Inflow, outflow, and storage",
-      "Discharge and sediment",
-    ],
-    answer: "Inflow, outflow, and storage",
-  },
-
-  {
-    question: "Synthetic unit hydrographs are commonly used when:",
-    options: [
-      "Radar data are available",
-      "Watersheds are ungauged",
-      "Rainfall intensity is low",
-      "Baseflow is negligible",
-    ],
-    answer: "Watersheds are ungauged",
-  },
-
-  {
-    question: "Urbanization generally causes:",
-    options: [
-      "Lower peak flow and longer lag time",
-      "Increase in peak flow and shorter time to peak",
-      "Lower runoff coefficient",
-      "Increased infiltration",
-    ],
-    answer: "Increase in peak flow and shorter time to peak",
-  },
-
-  {
-    question: "IDF curves describe:",
-    options: [
-      "Evaporation frequency",
-      "Probability of rainfall intensity for duration and frequency",
-      "Groundwater fluctuations",
-      "Storage-discharge relation",
-    ],
-    answer: "Probability of rainfall intensity for duration and frequency",
-  },
-
-  {
-    question: "Rainfall intensity in IDF curves generally:",
-    options: [
-      "Increases with duration",
-      "Remains constant",
-      "Decreases with duration",
-      "Depends only on area",
-    ],
-    answer: "Decreases with duration",
-  },
-
-  {
-    question: "The second central moment is called:",
-    options: [
-      "Mean",
-      "Skewness",
-      "Variance",
-      "Standard deviation",
-    ],
-    answer: "Variance",
-  },
-
-  {
-    question: "The Nash IUH model is based on:",
-    options: [
-      "Parallel reservoirs",
-      "N linear reservoirs in series",
-      "Muskingum routing",
-      "Clark storage",
-    ],
-    answer: "N linear reservoirs in series",
-  },
-
-  {
-    question: "Clark UH parameters are:",
-    options: [
-      "K and X",
-      "Curve Number and Ia",
-      "Concentration time and storage coefficient",
-      "Time area and φ-index",
-    ],
-    answer: "Concentration time and storage coefficient",
-  },
-
-  {
-    question: "The Muskingum routing method requires:",
-    options: [
-      "Two parameters K and X",
-      "Only K",
-      "Only X",
-      "Curve Number",
-    ],
-    answer: "Two parameters K and X",
-  },
-
-  {
-    question: "The φ-index method assumes:",
-    options: [
-      "Variable infiltration losses",
-      "Uniform abstraction rate",
-      "No infiltration",
-      "Storage-based losses",
-    ],
-    answer: "Uniform abstraction rate",
-  },
-
-  {
-    question: "In the SCS method, initial abstraction is approximately:",
-    options: [
-      "0.5S",
-      "0.1S",
-      "0.2S",
-      "2S",
-    ],
-    answer: "0.2S",
-  },
-
-  {
-    question: "The reciprocal of return period is:",
-    options: [
-      "Probability density",
-      "Exceedance probability",
-      "Variance",
-      "Frequency factor",
-    ],
-    answer: "Exceedance probability",
-  },
-
-  {
-    question: "Radar rainfall estimation has the advantage of:",
-    options: [
-      "Low temporal resolution",
-      "High spatial and temporal resolution",
-      "No calibration requirement",
-      "Point-only measurements",
-    ],
-    answer: "High spatial and temporal resolution",
-  },
-
-  {
-    question: "The Rational Method generally:",
-    options: [
-      "Underpredicts small basin floods",
-      "Overpredicts peak flows for large basins",
-      "Ignores runoff coefficient",
-      "Requires groundwater data",
-    ],
-    answer: "Overpredicts peak flows for large basins",
-  },
-
-  {
-    question: "An aquitard is:",
-    options: [
-      "Highly permeable aquifer",
-      "Impermeable rock",
-      "Low-permeability saturated layer",
-      "Unsaturated soil layer",
-    ],
-    answer: "Low-permeability saturated layer",
-  },
-
-  {
-    question: "Urban catchments usually respond:",
-    options: [
-      "Slower than rural basins",
-      "Faster than rural basins",
-      "Exactly the same",
-      "Only during winter",
-    ],
-    answer: "Faster than rural basins",
-  },
-
-  {
-    question: "Rainfall excess is obtained by:",
-    options: [
-      "Adding infiltration losses",
-      "Subtracting infiltration losses",
-      "Subtracting evaporation only",
-      "Ignoring abstractions",
-    ],
-    answer: "Subtracting infiltration losses",
-  },
-
-  {
-    question: "The Thiessen polygon method is used for:",
-    options: [
-      "Hydraulic routing",
-      "Rainfall areal weighting",
-      "Evaporation estimation",
-      "Flood frequency analysis",
-    ],
-    answer: "Rainfall areal weighting",
-  },
-
-  {
-    question: "The final infiltration rate is approximately equal to:",
-    options: [
-      "Rainfall intensity",
-      "Saturated hydraulic conductivity",
-      "Evaporation rate",
-      "Groundwater velocity",
-    ],
-    answer: "Saturated hydraulic conductivity",
-  },
-
-  {
-    question: "The main assumptions of Unit Hydrograph theory are:",
-    options: [
-      "Linearity and time invariance",
-      "Uniform evaporation",
-      "Steady groundwater flow",
-      "No runoff losses",
-    ],
-    answer: "Linearity and time invariance",
-  },
-
-  {
-    question: "The runoff coefficient is:",
-    options: [
-      "Runoff divided by infiltration",
-      "Rainfall divided by runoff",
-      "Ratio of runoff to precipitation",
-      "Storage divided by rainfall",
-    ],
-    answer: "Ratio of runoff to precipitation",
-  },
-
-  {
-    question: "Relative humidity is defined as:",
-    options: [
-      "Actual rainfall divided by runoff",
-      "Ratio of actual vapor to saturation vapor",
-      "Water content divided by porosity",
-      "Evaporation divided by temperature",
-    ],
-    answer: "Ratio of actual vapor to saturation vapor",
-  },
-
-  {
-    question: "Weather radar provides:",
-    options: [
-      "Groundwater levels",
-      "Rainfall rates over watersheds",
-      "Only temperature data",
-      "Soil moisture only",
-    ],
-    answer: "Rainfall rates over watersheds",
-  },
-
-  {
-    question: "Darcy’s law computes:",
-    options: [
-      "Open channel velocity",
-      "Flow in porous media",
-      "Hydrograph peak",
-      "Evaporation loss",
-    ],
-    answer: "Flow in porous media",
-  },
-
-  {
-    question: "The Doppler effect determines:",
-    options: [
-      "Rainfall acidity",
-      "Movement toward or away from radar",
-      "Groundwater storage",
-      "Soil saturation",
-    ],
-    answer: "Movement toward or away from radar",
-  },
-
-  {
-    question: "The Giandotti formula estimates:",
-    options: [
-      "Peak discharge",
-      "Evaporation",
-      "Time of concentration",
-      "Storage coefficient",
-    ],
-    answer: "Time of concentration",
-  },
-
-  {
-    question: "Curve Number mainly depends on:",
-    options: [
-      "Rainfall duration only",
-      "Soil type and land use",
-      "River slope only",
-      "Temperature and humidity",
-    ],
-    answer: "Soil type and land use",
-  },
-
-  {
-    question: "The Muskingum method is classified as:",
-    options: [
-      "Hydraulic routing",
-      "Hydrologic routing",
-      "Groundwater model",
-      "Evaporation method",
-    ],
-    answer: "Hydrologic routing",
-  },
-
-  {
-    question: "In the continuity equation:",
-    options: [
-      "Storage = inflow + outflow",
-      "Storage change = inflow − outflow",
-      "Outflow = rainfall excess",
-      "Velocity = storage/time",
-    ],
-    answer: "Storage change = inflow − outflow",
-  },
-
-  {
-    question: "Evapotranspiration becomes maximum when:",
-    options: [
-      "No vegetation exists",
-      "Water supply is unlimited",
-      "Temperature is below zero",
-      "Humidity is zero",
-    ],
-    answer: "Water supply is unlimited",
-  },
-
-  {
-    question: "Hygroscopic water:",
-    options: [
-      "Moves freely by gravity",
-      "Is absorbed on soil grain surfaces",
-      "Exists only below water table",
-      "Is equal to porosity",
-    ],
-    answer: "Is absorbed on soil grain surfaces",
-  },
-
-  {
-    question: "The wilting point is:",
-    options: [
-      "Saturation moisture content",
-      "Moisture below which plants cannot extract water",
-      "Field capacity",
-      "Maximum porosity",
-    ],
-    answer: "Moisture below which plants cannot extract water",
-  },
-]
-};
+    {
+      question: "The hydrograph’s time of rise is:",
+      options: [
+        "The total duration of the direct runoff",
+        "The time from the start of rainfall excess to the peak of the hydrograph",
+        "The time difference between peak rainfall and peak discharge",
+        "The time it takes for groundwater to reach the stream"
+      ],
+      answer: "The time from the start of rainfall excess to the peak of the hydrograph",
+    },
+    {
+      question: "The hyetograph is a bar plot representing:",
+      options: [
+        "Flow rate vs time",
+        "Cumulative rainfall vs distance",
+        "Rainfall intensity vs time",
+        "Stream stage vs watershed area"
+      ],
+      answer: "Rainfall intensity vs time",
+    },
+    {
+      question: "The hydrograph is a plot of:",
+      options: [
+        "Rainfall intensity vs time",
+        "Flow rate vs time",
+        "Infiltration capacity vs time",
+        "Evapotranspiration vs temperature"
+      ],
+      answer: "Flow rate vs time",
+    },
+    {
+      question: "The direct runoff hydrograph is built using:",
+      options: [
+        "Total streamflow including baseflow",
+        "Discharge from rainfall excess, after infiltration losses have been subtracted",
+        "Only the groundwater flow component",
+        "The total precipitation before any losses are accounted for"
+      ],
+      answer: "Discharge from rainfall excess, after infiltration losses have been subtracted",
+    },
+    {
+      question: "The hydrograph peak occurs when:",
+      options: [
+        "The rainfall intensity is at its absolute maximum",
+        "Infiltration rates drop to zero",
+        "All areas of the watershed are contributing to the outlet",
+        "The baseflow intersects the direct runoff"
+      ],
+      answer: "All areas of the watershed are contributing to the outlet",
+    },
+    {
+      question: "In the Unit Hydrograph (UH) theory, the unit hydrograph is composed of:",
+      options: [
+        "1 mm of total rainfall over a 24-hour period",
+        "10 mm of direct runoff generated randomly",
+        "1 mm of direct runoff, which is equivalent to 1 mm of net rainfall for a given duration",
+        "1 mm of infiltration spread uniformly over the basin"
+      ],
+      answer: "1 mm of direct runoff, which is equivalent to 1 mm of net rainfall for a given duration",
+    },
+    {
+      question: "The basic components of the hydrologic cycle include:",
+      options: [
+        "Precipitation, condensation, and ocean currents only",
+        "Precipitation, evaporation, evapotranspiration, infiltration, overland flow, stream flow and ground water flow",
+        "Solar radiation, wind speed, and humidity",
+        "Runoff, baseflow, and deep percolation exclusively"
+      ],
+      answer: "Precipitation, evaporation, evapotranspiration, infiltration, overland flow, stream flow and ground water flow",
+    },
+    {
+      question: "The hydraulic routing is based on the solution of:",
+      options: [
+        "The Rational method equations",
+        "Continuity and momentum equations",
+        "The Green and Ampt equations",
+        "Energy budget and mass transfer equations"
+      ],
+      answer: "Continuity and momentum equations",
+    },
+    {
+      question: "Hydrologic routing involves the balancing of:",
+      options: [
+        "Precipitation and infiltration",
+        "Kinematic and dynamic waves",
+        "Inflow, outflow and volume of storage",
+        "Velocity and cross-sectional area"
+      ],
+      answer: "Inflow, outflow and volume of storage",
+    },
+    {
+      question: "The inflection point of a hydrograph is assumed to be the point where:",
+      options: [
+        "The baseflow begins",
+        "The direct runoff ends",
+        "Peak rainfall occurs",
+        "The time of concentration is reached"
+      ],
+      answer: "The direct runoff ends",
+    },
+    {
+      question: "To represent the hydrologic data in the plotting position are required:",
+      options: [
+        "The standard deviation and the mean",
+        "The magnitude and the return period",
+        "The skewness and the variance",
+        "The intensity and the duration"
+      ],
+      answer: "The magnitude and the return period",
+    },
+    {
+      question: "The synthetic unit hydrographs are used when:",
+      options: [
+        "Watersheds are ungauged",
+        "Radar data is unavailable",
+        "The watershed is highly urbanized",
+        "The baseflow is zero"
+      ],
+      answer: "Watersheds are ungauged",
+    },
+    {
+      question: "The concentration time of a watershed is:",
+      options: [
+        "The time it takes for a storm to pass over the basin",
+        "The duration of the effective rainfall",
+        "The time for a wave of water to propagate from the most distant point in the basin to the outlet",
+        "The time between the center of mass of rainfall and the peak discharge"
+      ],
+      answer: "The time for a wave of water to propagate from the most distant point in the basin to the outlet",
+    },
+    {
+      question: "As a watershed develops with urbanization through time, the response normally:",
+      options: [
+        "Decreases in peak flow and increases in time to peak",
+        "Increases in peak flow and decreases in terms of the time of peak",
+        "Remains constant due to artificial drainage",
+        "Increases in both peak flow and time of peak"
+      ],
+      answer: "Increases in peak flow and decreases in terms of the time of peak",
+    },
+    {
+      question: "The (IDF) curves are graphical representation of:",
+      options: [
+        "The probability that a certain average rainfall intensity will occur, given a duration",
+        "The infiltration capacity of a soil over time",
+        "The relationship between discharge and stage at a gaging station",
+        "The mass of water evaporated over a specific temperature range"
+      ],
+      answer: "The probability that a certain average rainfall intensity will occur, given a duration",
+    },
+    {
+      question: "In the intensity duration frequency (IDF) curves, the rainfall intensity tends to:",
+      options: [
+        "Increase with increasing duration",
+        "Decrease with increasing duration",
+        "Remain constant regardless of duration",
+        "Peak at the 12-hour mark and then decline"
+      ],
+      answer: "Decrease with increasing duration",
+    },
+    {
+      question: "Order the following materials based on their particle sizes, form the smallest to the biggest:",
+      options: [
+        "Sand – Silt – Clay – Gravel",
+        "Gravel – Sand – Silt – Clay",
+        "Clay – Silt – Sand – Gravel",
+        "Silt – Clay – Gravel – Sand"
+      ],
+      answer: "Clay – Silt – Sand – Gravel",
+    },
+    {
+      question: "The first moment about the origin is called:",
+      options: [
+        "The variance",
+        "The skewness",
+        "The mean; average; expected value",
+        "The standard deviation"
+      ],
+      answer: "The mean; average; expected value",
+    },
+    {
+      question: "The water surface evaporation relation developed by Penman, used the best features of which methods:",
+      options: [
+        "Aerodynamic and kinematic methods",
+        "Mass transfer and energy budget methods",
+        "Rational and curve number methods",
+        "Horton and Green-Ampt methods"
+      ],
+      answer: "Mass transfer and energy budget methods",
+    },
+    {
+      question: "The two major parameters of the Clark unit hydrograph are:",
+      options: [
+        "Curve number and initial abstraction",
+        "Lag time and peak discharge",
+        "Concentration time and storage coefficient",
+        "Saturated hydraulic conductivity and suction head"
+      ],
+      answer: "Concentration time and storage coefficient",
+    },
+    {
+      question: "Excess Rainfall associated to a soil with Curve Number III (CNIII) is:",
+      options: [
+        "Lower than those associated to a soil with CNII and CNI",
+        "Exactly equal to CNII",
+        "Higher than those associated to a soil with CNII and CNI",
+        "Zero, because CNIII soils are perfectly permeable"
+      ],
+      answer: "Higher than those associated to a soil with CNII and CNI",
+    },
+    {
+      question: "Given a rainfall depth of 50 mm recorded in 2 hours, how much is the rainfall intensity?",
+      options: [
+        "100 mm/h",
+        "50 mm/h",
+        "25 mm/h",
+        "10 mm/h"
+      ],
+      answer: "25 mm/h",
+    },
+    {
+      question: "What does the Ф index represent?",
+      options: [
+        "A variable rate of evapotranspiration",
+        "Constant rate of abstraction to generate an excess rainfall hyetograph",
+        "The initial abstraction before ponding occurs",
+        "The peak discharge of a unit hydrograph"
+      ],
+      answer: "Constant rate of abstraction to generate an excess rainfall hyetograph",
+    },
+    {
+      question: "What triggers ponding according to the Green-Ampt method?",
+      options: [
+        "When the cumulative rainfall reaches 10 mm",
+        "When rainfall intensity exceeds the potential infiltration rate",
+        "When the soil reaches its wilting point",
+        "When groundwater rises to the surface"
+      ],
+      answer: "When rainfall intensity exceeds the potential infiltration rate",
+    },
+    {
+      question: "Given N pulses of Direct Runoff Hydrograph (DRH) and M pulses of Excess Rainfall Hyetograph the number of pulses k of the Unit Hydrograph (UH) is given by:",
+      options: [
+        "k = N + M",
+        "k = N / M",
+        "k = N - M + 1",
+        "k = N * M - 1"
+      ],
+      answer: "k = N - M + 1",
+    }
+  ]
+}
