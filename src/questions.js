@@ -5473,5 +5473,328 @@ pastYears: [
       ],
       answer: "k = N - M + 1",
     }
-  ]
+  ],
+  exercises: [
+    // ---------- Ex.1 — Hydrologic data, continuity & storage ----------
+    {
+      question: "Discrete continuity equation. The change of storage in a watershed over one interval is:",
+      options: ["ΔS = I + Q", "ΔS = I − Q", "ΔS = Q − I", "ΔS = I × Q"],
+      answer: "ΔS = I − Q",
+      explanation: "dS/dt = I − Q. Over a discrete interval ΔS_j = I_j − Q_j, and total storage S_j = S_0 + Σ(I_i − Q_i).",
+    },
+    {
+      question: "At a given time interval the inflow (precipitation) is I = 6 m³/s and outflow (streamflow) is Q = 8 m³/s. The storage change ΔS is:",
+      options: ["+2 (filling)", "−2 (emptying)", "+14", "0"],
+      answer: "−2 (emptying)",
+      explanation: "ΔS = I − Q = 6 − 8 = −2. Outflow exceeds inflow, so stored water is decreasing.",
+    },
+    {
+      question: "Water accumulation (storage) in a basin is MAXIMUM at the moment when:",
+      options: ["Inflow I is maximum", "Outflow Q is maximum", "Inflow equals outflow (I = Q), as I drops below Q", "Rainfall starts"],
+      answer: "Inflow equals outflow (I = Q), as I drops below Q",
+      explanation: "Storage peaks when dS/dt = I − Q = 0, i.e. exactly when the inflow curve crosses the outflow curve on the way down.",
+    },
+    {
+      question: "If 80 mm of rain falls and 30 mm leaves as surface runoff, the percentage of rain that became runoff is:",
+      options: ["30%", "37.5%", "50%", "62.5%"],
+      answer: "37.5%",
+      explanation: "Runoff % = runoff ÷ precipitation = 30/80 = 0.375 = 37.5%. The retained fraction = 1 − 0.375 = 62.5%.",
+    },
+
+    // ---------- Rainfall intensity (basic divide) ----------
+    {
+      question: "A rainfall depth of 50 mm is recorded in 2 hours. The average rainfall intensity is:",
+      options: ["100 mm/h", "50 mm/h", "25 mm/h", "12.5 mm/h"],
+      answer: "25 mm/h",
+      explanation: "Intensity i = depth ÷ duration = 50 mm ÷ 2 h = 25 mm/h.",
+    },
+    {
+      question: "A storm drops 100 mm in 2 hours. The intensity is:",
+      options: ["25 mm/h", "50 mm/h", "100 mm/h", "200 mm/h"],
+      answer: "50 mm/h",
+      explanation: "i = 100 mm ÷ 2 h = 50 mm/h.",
+    },
+
+    // ---------- Ex.3 — IDF / 3-parameter formula ----------
+    {
+      question: "The three-parameter IDF formula gives intensity as:",
+      options: ["i = a·(b+δ)^m", "i = a / (b+δ)^m", "i = (b+δ)^m / a", "i = a − m·(b+δ)"],
+      answer: "i = a / (b+δ)^m",
+      explanation: "i(δ) = a/(b+δ)^m. Because m>0, intensity DECREASES as duration δ increases — the defining shape of IDF curves.",
+    },
+    {
+      question: "In the three-parameter IDF formula i = a/(b+δ)^m, which parameter is treated as a random variable linked to the return period?",
+      options: ["b", "m", "a", "δ"],
+      answer: "a",
+      explanation: "‘a’ is fitted as a random variable (via Gumbel/Fréchet); b and m are kept common to all curves so they stay parallel. Each return period gives a different ‘a’.",
+    },
+    {
+      question: "On an IDF (intensity–duration) graph, as the duration increases the curves:",
+      options: ["Rise", "Fall (intensity decreases)", "Stay flat", "Cross the x-axis"],
+      answer: "Fall (intensity decreases)",
+      explanation: "Intensity decreases with duration. Note: a DDF (depth–duration) curve does the opposite — depth INCREASES with duration.",
+    },
+    {
+      question: "On the IDF chart, a curve for a HIGHER return period (e.g. T=100 yr) sits:",
+      options: ["Below the T=2 yr curve", "Above the lower-T curves", "Exactly on the T=5 yr curve", "Always at zero"],
+      answer: "Above the lower-T curves",
+      explanation: "Rarer events are more intense, so higher-return-period curves lie above lower ones for every duration.",
+    },
+    {
+      question: "A rectangular design hyetograph from the IDF assumes the rainfall intensity over the duration δ is:",
+      options: ["Constant", "Triangular with a central peak", "Zero then rising", "Random"],
+      answer: "Constant",
+      explanation: "Rectangular hyetograph = constant intensity given directly by the three-parameter formula. (The triangular one peaks in the middle at twice that value.)",
+    },
+    {
+      question: "In a TRIANGULAR design hyetograph, the peak intensity compared with the rectangular (average) one is:",
+      options: ["The same", "Half", "Twice as high", "Ten times"],
+      answer: "Twice as high",
+      explanation: "The triangular hyetograph keeps the same average (volume) but the peak is twice the rectangular intensity, placed at the middle of the event.",
+    },
+
+    // ---------- Ex.4 — Areal precipitation ----------
+    {
+      question: "The simplest method to estimate areal rainfall over a watershed is:",
+      options: ["Isohyetal method", "Thiessen polygons", "Arithmetic mean of the gauges", "Inverse Distance Weighting"],
+      answer: "Arithmetic mean of the gauges",
+      explanation: "Arithmetic mean = simple average of point gauges. It works well only if gauges are uniformly distributed and values don't vary much.",
+    },
+    {
+      question: "Three gauges record 40, 50 and 60 mm. The arithmetic-mean areal rainfall is:",
+      options: ["40 mm", "50 mm", "60 mm", "150 mm"],
+      answer: "50 mm",
+      explanation: "Arithmetic mean = (40+50+60)/3 = 150/3 = 50 mm.",
+    },
+    {
+      question: "The Thiessen polygon method weights each gauge by:",
+      options: ["Its elevation", "Its polygon area (fraction of the basin)", "Its distance to the outlet", "The rainfall intensity"],
+      answer: "Its polygon area (fraction of the basin)",
+      explanation: "Areal rainfall = Σ(A_j·i_j)/A. Each gauge represents the area of its Thiessen polygon (nearest-gauge rule).",
+    },
+    {
+      question: "Two gauges: gauge 1 reads 30 mm over 40% of the area, gauge 2 reads 50 mm over 60%. The Thiessen areal mean is:",
+      options: ["40 mm", "42 mm", "45 mm", "80 mm"],
+      answer: "42 mm",
+      explanation: "Weighted average = 0.40×30 + 0.60×50 = 12 + 30 = 42 mm.",
+    },
+    {
+      question: "The MOST accurate areal-rainfall method, which draws contours of equal rainfall, is the:",
+      options: ["Arithmetic mean", "Thiessen method", "Isohyetal method", "Rational method"],
+      answer: "Isohyetal method",
+      explanation: "Isohyets = lines of equal precipitation; it best captures spatial variation (e.g. orographic effects), so it's the most accurate.",
+    },
+    {
+      question: "Inverse Distance Weighting (IDW) gives nearby gauges:",
+      options: ["Less influence", "More influence (weight ∝ 1/distance)", "Equal influence", "Zero influence"],
+      answer: "More influence (weight ∝ 1/distance)",
+      explanation: "IDW weights decline with distance from the point being estimated, so closer gauges dominate the interpolated value.",
+    },
+    {
+      question: "The Areal Reduction Factor (ARF) is always:",
+      options: ["Greater than 1", "Equal to 1", "Less than or equal to 1", "Negative"],
+      answer: "Less than or equal to 1",
+      explanation: "ARF = areal depth ÷ point depth ≤ 1. It reduces a point rainfall to an areal value, decreasing with larger area and shorter duration.",
+    },
+
+    // ---------- Ex.6 — phi-index, runoff coefficient, SCS ----------
+    {
+      question: "The φ-index represents:",
+      options: ["A variable infiltration that decays with time", "A constant rate of abstraction that yields the excess-rainfall hyetograph", "The peak runoff", "The base flow"],
+      answer: "A constant rate of abstraction that yields the excess-rainfall hyetograph",
+      explanation: "φ-index = a single constant loss rate (cm/h) such that the rain above it equals the observed direct-runoff depth. The simplest infiltration model.",
+    },
+    {
+      question: "Hourly rainfall blocks are 1.5, 3.0, 2.5, 1.0 cm and the direct-runoff depth is 4 cm. The φ-index (cm/h) is:",
+      options: ["0.5", "1.0", "1.5", "2.0"],
+      answer: "1.0",
+      explanation: "Need Σ(R−φ) = 4. With φ=1: (0.5)+(2.0)+(1.5)+(0) = 4 cm ✓. (Blocks below φ contribute 0.)",
+    },
+    {
+      question: "The runoff coefficient C is defined as:",
+      options: ["Runoff ÷ rainfall", "Rainfall ÷ runoff", "Runoff × rainfall", "Infiltration ÷ runoff"],
+      answer: "Runoff ÷ rainfall",
+      explanation: "C = direct runoff depth ÷ total rainfall depth (or ratio of peak runoff to average rainfall intensity). Always between 0 and 1.",
+    },
+    {
+      question: "If total rainfall is 50 mm and direct runoff is 20 mm, the runoff coefficient C is:",
+      options: ["0.2", "0.4", "0.6", "2.5"],
+      answer: "0.4",
+      explanation: "C = 20/50 = 0.4.",
+    },
+    {
+      question: "In the SCS method, the potential maximum retention S is obtained from the curve number by:",
+      options: ["S = 254·(100/CN − 1)", "S = 254·CN", "S = CN/254", "S = 0.2·CN"],
+      answer: "S = 254·(100/CN − 1)",
+      explanation: "S (mm) = 254·(100/CN − 1). CN=100 → S=0 (impervious); lower CN → larger retention.",
+    },
+    {
+      question: "For a curve number CN = 80, the potential maximum retention S is about:",
+      options: ["12.7 mm", "63.5 mm", "127 mm", "254 mm"],
+      answer: "63.5 mm",
+      explanation: "S = 254·(100/80 − 1) = 254·0.25 = 63.5 mm.",
+    },
+    {
+      question: "In the SCS method the initial abstraction Ia is taken as:",
+      options: ["Ia = 0.2·S", "Ia = 0.8·S", "Ia = S", "Ia = 2·S"],
+      answer: "Ia = 0.2·S",
+      explanation: "Empirically Ia = 0.2·S — the rainfall that must fall before any runoff begins (P − Ia = potential runoff).",
+    },
+    {
+      question: "The SCS excess-rainfall (effective) depth is computed as:",
+      options: ["Pe = (P − 0.2S)² / (P + 0.8S)", "Pe = P − S", "Pe = 0.2S", "Pe = (P + 0.2S)²/(P − 0.8S)"],
+      answer: "Pe = (P − 0.2S)² / (P + 0.8S)",
+      explanation: "Valid when P > Ia = 0.2S; otherwise Pe = 0. Substitutes Ia = 0.2S into the SCS ratio hypothesis.",
+    },
+    {
+      question: "Curve Number (CN) depends on which three factors?",
+      options: ["Slope, area, length", "Antecedent moisture condition, soil type, land use", "Wind, temperature, humidity", "Rainfall intensity, duration, return period"],
+      answer: "Antecedent moisture condition, soil type, land use",
+      explanation: "CN is tabulated from soil hydrologic group (A–D), land use/cover, and antecedent moisture condition (AMC I dry, II normal, III wet).",
+    },
+    {
+      question: "Compared with normal conditions (AMC II), wet antecedent conditions (AMC III) give a curve number that is:",
+      options: ["Lower", "Higher", "Unchanged", "Always 100"],
+      answer: "Higher",
+      explanation: "Wetter soil → less storage → higher CN → more runoff. (Dry AMC I lowers CN.)",
+    },
+    {
+      question: "Excess rainfall associated with a soil of CN III is, compared with CN II and CN I:",
+      options: ["Lower", "Equal", "Higher", "Zero"],
+      answer: "Higher",
+      explanation: "Higher CN (wetter) → higher runoff, so CN III produces the most excess rainfall of the three.",
+    },
+
+    // ---------- Rational method ----------
+    {
+      question: "The Rational Method peak-flow formula is:",
+      options: ["Q = C·i·A", "Q = i·A / C", "Q = C·A / i", "Q = C + i + A"],
+      answer: "Q = C·i·A",
+      explanation: "Q_p = C·i·A (runoff coefficient × intensity × area). Intensity is read from the IDF at duration = time of concentration.",
+    },
+    {
+      question: "Using Q = C·i·A with C = 0.6, i = 30 mm/h, A = 2 km² (Q[m³/s] = C·i·A/3.6), the peak flow is:",
+      options: ["5 m³/s", "10 m³/s", "36 m³/s", "100 m³/s"],
+      answer: "10 m³/s",
+      explanation: "Q = 0.6×30×2 / 3.6 = 36/3.6 = 10 m³/s. The /3.6 converts mm/h·km² into m³/s.",
+    },
+    {
+      question: "In the rational method, the design rainfall intensity is taken from the IDF curve at a duration equal to:",
+      options: ["1 hour always", "24 hours", "The time of concentration t_c", "The time base"],
+      answer: "The time of concentration t_c",
+      explanation: "Peak flow occurs when the whole basin contributes — at t_c — so the intensity used is the IDF value for duration = t_c.",
+    },
+    {
+      question: "The hydrograph produced by the rational method has the shape of:",
+      options: ["A gamma curve", "An isosceles triangle", "A rectangle", "An S-curve"],
+      answer: "An isosceles triangle",
+      explanation: "Constant rain for one t_c gives a triangular hydrograph rising over t_c and falling over t_c (isosceles).",
+    },
+
+    // ---------- Ex.2 — Statistics ----------
+    {
+      question: "The first moment about the origin of a data sample is the:",
+      options: ["Variance", "Mean (expected value)", "Skewness", "Standard deviation"],
+      answer: "Mean (expected value)",
+      explanation: "1st moment about the origin = mean. The 2nd central moment = variance; 3rd central moment relates to skewness.",
+    },
+    {
+      question: "The coefficient of variation (CV) of a sample is:",
+      options: ["σ × μ", "μ / σ", "σ / μ", "σ²"],
+      answer: "σ / μ",
+      explanation: "CV = standard deviation ÷ mean — a dimensionless measure of relative spread.",
+    },
+    {
+      question: "A discharge sample has mean μ = 200 m³/s and standard deviation σ = 50 m³/s. Its coefficient of variation is:",
+      options: ["0.10", "0.25", "0.40", "4.0"],
+      answer: "0.25",
+      explanation: "CV = σ/μ = 50/200 = 0.25.",
+    },
+    {
+      question: "If the skewness of a distribution is negative, then:",
+      options: ["Mean = median = mode", "The mode is greater than the median", "The tail points to the right", "Variance is negative"],
+      answer: "The mode is greater than the median",
+      explanation: "Negative skew = long left tail; ordering becomes mode > median > mean.",
+    },
+    {
+      question: "The Weibull plotting position estimates the empirical (non-exceedance) frequency as:",
+      options: ["F = i/(N+1)", "F = N/(i+1)", "F = i·N", "F = 1/i"],
+      answer: "F = i/(N+1)",
+      explanation: "Weibull: F(x) = i/(N+1), where i = rank of the value and N = sample size. It gives an empirical frequency for plotting on probability paper.",
+    },
+    {
+      question: "In the Weibull plotting position F(x) = i/(N+1), the symbol i is:",
+      options: ["The sample size", "The rank of the value", "The empirical frequency", "The return period"],
+      answer: "The rank of the value",
+      explanation: "i = rank (position when data are ordered); N = number of observations.",
+    },
+    {
+      question: "The return period T is related to the exceedance probability P by:",
+      options: ["T = P", "T = 1/P", "T = 1 − P", "T = P²"],
+      answer: "T = 1/P",
+      explanation: "T = 1/P, so the reciprocal of the return period (1/T) is the exceedance probability. T=100 yr ⇒ P = 0.01 per year.",
+    },
+    {
+      question: "An event with exceedance probability 0.02 in any year has a return period of:",
+      options: ["2 years", "20 years", "50 years", "200 years"],
+      answer: "50 years",
+      explanation: "T = 1/P = 1/0.02 = 50 years.",
+    },
+    {
+      question: "On probability paper, the dots represent the sample observations and the straight line represents the:",
+      options: ["IDF curve", "Theoretical probability distribution function", "Rating curve", "Hyetograph"],
+      answer: "Theoretical probability distribution function",
+      explanation: "Dots = empirical (Weibull) frequencies of observations; the line = the fitted theoretical distribution. The closest fit wins.",
+    },
+    {
+      question: "To estimate IDF curves (or perform flood frequency analysis), the required data are:",
+      options: ["Daily mean flows", "Annual maxima observations", "Monthly totals", "A single storm"],
+      answer: "Annual maxima observations",
+      explanation: "Frequency analysis uses the annual maximum series (e.g. annual maxima hourly rainfall, or annual peak discharges).",
+    },
+
+    // ---------- Ex.7 — Unit Hydrograph convolution ----------
+    {
+      question: "The discrete convolution equation that builds direct runoff from a unit hydrograph is:",
+      options: ["Qn = Σ Pm · U(n−m+1)", "Qn = Σ Pm + Un", "Qn = Pm / Un", "Qn = Pm − Un"],
+      answer: "Qn = Σ Pm · U(n−m+1)",
+      explanation: "Convolution: Qn = Σ Pm·U(n−m+1). Multiply each excess-rainfall pulse by the UH ordinates, then add and lag them.",
+    },
+    {
+      question: "A storm has M = 3 excess-rainfall pulses and the resulting DRH has N = 6 pulses. The unit hydrograph has how many ordinates?",
+      options: ["3", "4", "8", "9"],
+      answer: "4",
+      explanation: "Number of UH ordinates = N − M + 1 = 6 − 3 + 1 = 4.",
+    },
+    {
+      question: "Deriving the unit hydrograph from known excess rainfall and direct runoff is called:",
+      options: ["Convolution", "Deconvolution", "Routing", "Interpolation"],
+      answer: "Deconvolution",
+      explanation: "Convolution builds Q from P and U; the reverse — solving for U given P and Q — is deconvolution (a least-squares/matrix problem).",
+    },
+    {
+      question: "By UH theory, a unit hydrograph is the direct runoff produced by:",
+      options: ["1 cm (or 1 mm) of excess rainfall, uniform over the area, at constant rate for the effective duration", "Total rainfall including losses", "1 m³/s of base flow", "Any storm of any size"],
+      answer: "1 cm (or 1 mm) of excess rainfall, uniform over the area, at constant rate for the effective duration",
+      explanation: "Sherman's definition: DRH from one unit depth of excess rainfall, uniform in space, constant intensity, for a set duration. The system is linear and time-invariant.",
+    },
+    {
+      question: "If the excess-rainfall pulses use a 1-hour time step, the unit hydrograph used in the convolution must be:",
+      options: ["A 30-min UH", "A 1-hour UH", "An instantaneous UH", "Any duration"],
+      answer: "A 1-hour UH",
+      explanation: "The pulse duration of the excess rainfall must match the UH duration exactly — 1-hr increments ↔ 1-hr UH.",
+    },
+    {
+      question: "Reading a simulated-vs-observed hydrograph plot: to make the simulated PEAK happen LATER (postpone it), you should:",
+      options: ["Decrease the routing/lag time", "Increase the routing/lag (translation) time", "Increase rainfall intensity", "Lower the curve number"],
+      answer: "Increase the routing/lag (translation) time",
+      explanation: "More channel routing/lag translates and delays the hydrograph, shifting the peak to a later time (and attenuating it).",
+    },
+    {
+      question: "On a HEC-HMS calibration plot, to INCREASE the simulated peak flow you would:",
+      options: ["Increase initial abstraction and decrease CN", "Decrease initial abstraction and increase CN", "Increase the lag time", "Reduce the rainfall"],
+      answer: "Decrease initial abstraction and increase CN",
+      explanation: "Less initial abstraction + higher curve number ⇒ more excess rainfall ⇒ higher runoff peak.",
+    },
+  ],
 }
