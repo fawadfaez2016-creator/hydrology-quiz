@@ -5796,5 +5796,221 @@ pastYears: [
       answer: "Decrease initial abstraction and increase CN",
       explanation: "Less initial abstraction + higher curve number ⇒ more excess rainfall ⇒ higher runoff peak.",
     },
-  ],
+    // ---------- Graph-based exam-style questions ----------
+    {
+      figure: `<svg viewBox="0 0 360 220" style="width:100%;height:auto;max-width:430px;display:block;margin:0 auto">
+<rect width="360" height="220" fill="#ffffff"/>
+<line x1="40" y1="180" x2="345" y2="180" stroke="#475569" stroke-width="1.5"/>
+<line x1="40" y1="20" x2="40" y2="180" stroke="#475569" stroke-width="1.5"/>
+<text x="190" y="205" font-size="12" fill="#475569" text-anchor="middle">time (h)</text>
+<text x="14" y="105" font-size="12" fill="#475569" text-anchor="middle" transform="rotate(-90 14,105)">Q (m³/s)</text>
+
+<g stroke="#e2e8f0" stroke-width="1">
+<line x1="77.5" y1="20" x2="77.5" y2="180"/><line x1="115" y1="20" x2="115" y2="180"/>
+<line x1="152.5" y1="20" x2="152.5" y2="180"/><line x1="190" y1="20" x2="190" y2="180"/>
+<line x1="227.5" y1="20" x2="227.5" y2="180"/><line x1="265" y1="20" x2="265" y2="180"/>
+<line x1="302.5" y1="20" x2="302.5" y2="180"/></g>
+<g font-size="10" fill="#64748b" text-anchor="middle">
+<text x="40" y="194">0</text><text x="115" y="194">2</text><text x="190" y="194">4</text>
+<text x="265" y="194">6</text><text x="340" y="194">8</text></g>
+<path d="M40,164.9 L44,164.9 L48,164.8 L52,164.7 L56,164.6 L60,164.4 L64,164.2 L68,163.9 L72,163.5 L76,163.0 L80,162.3 L84,161.4 L88,160.3 L92,158.9 L96,157.2 L100,155.2 L104,152.6 L108,149.6 L112,146.1 L116,142.0 L120,137.3 L124,132.0 L128,126.0 L132,119.5 L136,112.4 L140,104.8 L144,96.9 L148,88.7 L152,80.3 L156,72.1 L160,64.1 L164,56.5 L168,49.6 L172,43.4 L176,38.3 L180,34.3 L184,31.6 L188,30.2 L192,32.7 L196,38.1 L200,43.2 L204,48.1 L208,52.8 L212,57.3 L216,61.6 L220,65.8 L224,69.7 L228,73.6 L232,77.2 L236,80.8 L240,84.2 L244,87.4 L248,90.5 L252,93.5 L256,96.4 L260,99.2 L264,101.8 L268,104.3 L272,106.8 L276,109.1 L280,111.4 L284,113.5 L288,115.6 L292,117.6 L296,119.5 L300,121.3 L304,123.1 L308,124.8 L312,126.4 L316,127.9 L320,129.4 L324,130.8 L328,132.2 L332,133.5 L336,134.8 L340,136.0" fill="none" stroke="#2563eb" stroke-width="2.5"/>
+<circle cx="190" cy="30" r="3.5" fill="#dc2626"/>
+</svg>`,
+      question: "From the hydrograph below, the time of rise (time to peak) is approximately:",
+      options: [
+        "2 hours",
+        "4 hours",
+        "6 hours",
+        "8 hours"
+      ],
+      answer: "4 hours",
+      explanation: "The peak (red dot) sits at t ≈ 4 h on the axis, so the time of rise from the start of runoff to the peak is about 4 hours.",
+    },
+    {
+      figure: `<svg viewBox="0 0 300 220" style="width:100%;height:auto;max-width:380px;display:block;margin:0 auto">
+<rect width="300" height="220" fill="#ffffff"/>
+<line x1="40" y1="180" x2="285" y2="180" stroke="#475569" stroke-width="1.5"/>
+<line x1="40" y1="20" x2="40" y2="180" stroke="#475569" stroke-width="1.5"/>
+<text x="165" y="205" font-size="12" fill="#475569" text-anchor="middle">Outflow Q</text>
+<text x="14" y="105" font-size="12" fill="#475569" text-anchor="middle" transform="rotate(-90 14,105)">Storage S</text>
+<path d="M232.0,64.0 L231.7,60.5 L230.8,57.4 L229.2,54.6 L227.1,52.3 L224.3,50.4 L221.0,48.9 L217.2,47.9 L212.8,47.3 L208.0,47.2 L202.7,47.5 L197.0,48.4 L191.0,49.6 L184.7,51.3 L178.0,53.5 L171.2,56.0 L164.2,59.0 L157.1,62.3 L150.0,66.0 L142.9,70.0 L135.8,74.3 L128.8,78.8 L122.0,83.6 L115.3,88.5 L109.0,93.6 L103.0,98.8 L97.3,104.1 L92.0,109.4 L87.2,114.7 L82.8,120.0 L79.0,125.1 L75.7,130.1 L72.9,135.0 L70.8,139.6 L69.2,144.0 L68.3,148.2 L68.0,152.0 L68.3,155.5 L69.2,158.6 L70.8,161.4 L72.9,163.7 L75.7,165.6 L79.0,167.1 L82.8,168.1 L87.2,168.7 L92.0,168.8 L97.3,168.5 L103.0,167.6 L109.0,166.4 L115.3,164.7 L122.0,162.5 L128.8,160.0 L135.8,157.0 L142.9,153.7 L150.0,150.0 L157.1,146.0 L164.2,141.7 L171.2,137.2 L178.0,132.4 L184.7,127.5 L191.0,122.4 L197.0,117.2 L202.7,111.9 L208.0,106.6 L212.8,101.3 L217.2,96.0 L221.0,90.9 L224.3,85.9 L227.1,81.0 L229.2,76.4 L230.8,72.0 L231.7,67.8 L232.0,64.0 Z" fill="none" stroke="#7c3aed" stroke-width="2.5"/>
+<text x="195" y="58" font-size="11" fill="#7c3aed">rising</text>
+<text x="78" y="150" font-size="11" fill="#7c3aed">falling</text>
+</svg>`,
+      question: "In the IDF chart below, which curve (A or B) corresponds to the HIGHER return period?",
+      options: [
+        "Curve A (upper)",
+        "Curve B (lower)",
+        "They are equal",
+        "Cannot tell"
+      ],
+      answer: "Curve A (upper)",
+      explanation: "Rarer (higher-T) storms are more intense, so the higher curve A represents the larger return period for every duration.",
+    },
+    {
+      figure: `<svg viewBox="0 0 300 220" style="width:100%;height:auto;max-width:380px;display:block;margin:0 auto">
+<rect width="300" height="220" fill="#ffffff"/>
+<line x1="40" y1="180" x2="285" y2="180" stroke="#475569" stroke-width="1.5"/>
+<line x1="40" y1="20" x2="40" y2="180" stroke="#475569" stroke-width="1.5"/>
+<text x="165" y="205" font-size="12" fill="#475569" text-anchor="middle">Outflow Q</text>
+<text x="14" y="105" font-size="12" fill="#475569" text-anchor="middle" transform="rotate(-90 14,105)">Storage S</text>
+<path d="M232.0,64.0 L231.7,60.5 L230.8,57.4 L229.2,54.6 L227.1,52.3 L224.3,50.4 L221.0,48.9 L217.2,47.9 L212.8,47.3 L208.0,47.2 L202.7,47.5 L197.0,48.4 L191.0,49.6 L184.7,51.3 L178.0,53.5 L171.2,56.0 L164.2,59.0 L157.1,62.3 L150.0,66.0 L142.9,70.0 L135.8,74.3 L128.8,78.8 L122.0,83.6 L115.3,88.5 L109.0,93.6 L103.0,98.8 L97.3,104.1 L92.0,109.4 L87.2,114.7 L82.8,120.0 L79.0,125.1 L75.7,130.1 L72.9,135.0 L70.8,139.6 L69.2,144.0 L68.3,148.2 L68.0,152.0 L68.3,155.5 L69.2,158.6 L70.8,161.4 L72.9,163.7 L75.7,165.6 L79.0,167.1 L82.8,168.1 L87.2,168.7 L92.0,168.8 L97.3,168.5 L103.0,167.6 L109.0,166.4 L115.3,164.7 L122.0,162.5 L128.8,160.0 L135.8,157.0 L142.9,153.7 L150.0,150.0 L157.1,146.0 L164.2,141.7 L171.2,137.2 L178.0,132.4 L184.7,127.5 L191.0,122.4 L197.0,117.2 L202.7,111.9 L208.0,106.6 L212.8,101.3 L217.2,96.0 L221.0,90.9 L224.3,85.9 L227.1,81.0 L229.2,76.4 L230.8,72.0 L231.7,67.8 L232.0,64.0 Z" fill="none" stroke="#7c3aed" stroke-width="2.5"/>
+<text x="195" y="58" font-size="11" fill="#7c3aed">rising</text>
+<text x="78" y="150" font-size="11" fill="#7c3aed">falling</text>
+</svg>`,
+      question: "Reading the IDF chart, as the duration increases the rainfall intensity:",
+      options: [
+        "Increases",
+        "Decreases",
+        "Stays constant",
+        "Doubles"
+      ],
+      answer: "Decreases",
+      explanation: "Both curves fall from left to right — intensity decreases as duration increases (i = a/(b+δ)^m).",
+    },
+    {
+      figure: `<svg viewBox="0 0 300 220" style="width:100%;height:auto;max-width:380px;display:block;margin:0 auto">
+<rect width="300" height="220" fill="#ffffff"/>
+<line x1="40" y1="180" x2="285" y2="180" stroke="#475569" stroke-width="1.5"/>
+<line x1="40" y1="20" x2="40" y2="180" stroke="#475569" stroke-width="1.5"/>
+<text x="165" y="205" font-size="12" fill="#475569" text-anchor="middle">Outflow Q</text>
+<text x="14" y="105" font-size="12" fill="#475569" text-anchor="middle" transform="rotate(-90 14,105)">Storage S</text>
+<path d="M120.0,110.0 L129.4,107.5 L138.7,104.8 L147.8,102.0 L156.6,99.0 L165.0,95.6 L172.9,91.9 L180.2,87.8 L186.9,83.3 L192.8,78.6 L197.9,73.6 L202.2,68.6 L205.6,63.5 L208.0,58.6 L209.5,54.1 L210.0,50.0 L209.5,46.6 L208.0,44.0 L205.6,42.4 L202.2,41.8 L197.9,42.5 L192.8,44.3 L186.9,47.5 L180.2,52.0 L172.9,57.6 L165.0,64.4 L156.6,72.2 L147.8,80.9 L138.7,90.2 L129.4,100.0 L120.0,110.0 L110.6,120.0 L101.3,129.8 L92.2,139.1 L83.4,147.8 L75.0,155.6 L67.1,162.4 L59.8,168.0 L53.1,172.5 L47.2,175.7 L42.1,177.5 L37.8,178.2 L34.4,177.6 L32.0,176.0 L30.5,173.4 L30.0,170.0 L30.5,165.9 L32.0,161.4 L34.4,156.5 L37.8,151.4 L42.1,146.4 L47.2,141.4 L53.1,136.7 L59.8,132.2 L67.1,128.1 L75.0,124.4 L83.4,121.0 L92.2,118.0 L101.3,115.2 L110.6,112.5 L120.0,110.0 Z" fill="none" stroke="#7c3aed" stroke-width="2.5"/>
+<text x="200" y="60" font-size="11" fill="#7c3aed">rising</text>
+<text x="70" y="150" font-size="11" fill="#7c3aed">falling</text>
+</svg>`,
+      question: "The storage-versus-outflow relationship shown for the river reach takes the form of a:",
+      options: [
+        "Straight line",
+        "Loop",
+        "Parabola opening up",
+        "Step"
+      ],
+      answer: "Loop",
+      explanation: "During a flood wave the storage–outflow plot follows different paths on the rising and falling limbs, tracing a hysteresis loop.",
+    },
+    {
+      figure: `<svg viewBox="0 0 360 220" style="width:100%;height:auto;max-width:430px;display:block;margin:0 auto">
+<rect width="360" height="220" fill="#ffffff"/>
+<line x1="40" y1="180" x2="345" y2="180" stroke="#475569" stroke-width="1.5"/>
+<line x1="40" y1="20" x2="40" y2="180" stroke="#475569" stroke-width="1.5"/>
+<text x="190" y="205" font-size="12" fill="#475569" text-anchor="middle">time</text>
+<text x="14" y="105" font-size="12" fill="#475569" text-anchor="middle" transform="rotate(-90 14,105)">f (mm/h)</text>
+<path d="M40,41.5 L42,44.1 L45,46.6 L48,49.0 L50,51.3 L52,53.6 L55,55.8 L58,57.9 L60,60.0 L62,62.0 L65,64.0 L68,65.9 L70,67.7 L72,69.5 L75,71.2 L78,72.9 L80,74.5 L82,76.1 L85,77.6 L88,79.1 L90,80.6 L92,82.0 L95,83.3 L98,84.7 L100,86.0 L102,87.2 L105,88.4 L108,89.6 L110,90.7 L112,91.8 L115,92.9 L118,93.9 L120,94.9 L122,95.9 L125,96.9 L128,97.8 L130,98.7 L132,99.6 L135,100.4 L138,101.2 L140,102.0 L142,102.8 L145,103.5 L148,104.3 L150,105.0 L152,105.6 L155,106.3 L158,106.9 L160,107.6 L162,108.2 L165,108.8 L168,109.3 L170,109.9 L172,110.4 L175,111.0 L178,111.5 L180,111.9 L182,112.4 L185,112.9 L188,113.3 L190,113.8 L192,114.2 L195,114.6 L198,115.0 L200,115.4 L202,115.8 L205,116.1 L208,116.5 L210,116.8 L212,117.2 L215,117.5 L218,117.8 L220,118.1 L222,118.4 L225,118.7 L228,119.0 L230,119.2 L233,119.5 L235,119.7 L238,120.0 L240,120.2 L242,120.5 L245,120.7 L248,120.9 L250,121.1 L252,121.3 L255,121.5 L258,121.7 L260,121.9 L262,122.1 L265,122.3 L268,122.4 L270,122.6 L272,122.8 L275,122.9 L278,123.1 L280,123.2 L282,123.4 L285,123.5 L288,123.6 L290,123.8 L292,123.9 L295,124.0 L298,124.1 L300,124.3 L302,124.4 L305,124.5 L308,124.6 L310,124.7 L312,124.8 L315,124.9 L318,125.0 L320,125.1 L322,125.2 L325,125.2 L328,125.3 L330,125.4 L332,125.5 L335,125.6 L338,125.6 L340,125.7" fill="none" stroke="#16a34a" stroke-width="2.4"/><path d="M40,41.5 L42,50.1 L45,58.1 L48,65.5 L50,72.3 L52,78.7 L55,84.7 L58,90.2 L60,95.3 L62,100.1 L65,104.5 L68,108.6 L70,112.4 L72,116.0 L75,119.3 L78,122.4 L80,125.2 L82,127.9 L85,130.3 L88,132.6 L90,134.7 L92,136.7 L95,138.6 L98,140.3 L100,141.8 L102,143.3 L105,144.7 L108,146.0 L110,147.1 L112,148.2 L115,149.3 L118,150.2 L120,151.1 L122,151.9 L125,152.7 L128,153.4 L130,154.0 L132,154.7 L135,155.2 L138,155.8 L140,156.2 L142,156.7 L145,157.1 L148,157.5 L150,157.9 L152,158.2 L155,158.5 L158,158.8 L160,159.1 L162,159.4 L165,159.6 L168,159.8 L170,160.0 L172,160.2 L175,160.4 L178,160.5 L180,160.7 L182,160.8 L185,161.0 L188,161.1 L190,161.2 L192,161.3 L195,161.4 L198,161.5 L200,161.6 L202,161.7 L205,161.7 L208,161.8 L210,161.9 L212,161.9 L215,162.0 L218,162.0 L220,162.1 L222,162.1 L225,162.2 L228,162.2 L230,162.2 L233,162.3 L235,162.3 L238,162.3 L240,162.3 L242,162.4 L245,162.4 L248,162.4 L250,162.4 L252,162.5 L255,162.5 L258,162.5 L260,162.5 L262,162.5 L265,162.5 L268,162.5 L270,162.5 L272,162.6 L275,162.6 L278,162.6 L280,162.6 L282,162.6 L285,162.6 L288,162.6 L290,162.6 L292,162.6 L295,162.6 L298,162.6 L300,162.6 L302,162.6 L305,162.6 L308,162.6 L310,162.6 L312,162.7 L315,162.7 L318,162.7 L320,162.7 L322,162.7 L325,162.7 L328,162.7 L330,162.7 L332,162.7 L335,162.7 L338,162.7 L340,162.7" fill="none" stroke="#dc2626" stroke-width="2.4"/>
+<text x="250" y="78" font-size="12" fill="#16a34a" font-weight="bold">A</text>
+<text x="120" y="150" font-size="12" fill="#dc2626" font-weight="bold">B</text>
+</svg>`,
+      question: "In the infiltration plot, curve A declines slowly and levels off HIGHER than curve B. Curve A most likely represents a:",
+      options: [
+        "Clay soil",
+        "Sandy soil",
+        "Paved surface",
+        "Saturated rock"
+      ],
+      answer: "Sandy soil",
+      explanation: "Sand infiltrates faster and keeps a higher final rate; clay (curve B) declines more rapidly to a lower constant rate.",
+    },
+    {
+      figure: `<svg viewBox="0 0 360 220" style="width:100%;height:auto;max-width:430px;display:block;margin:0 auto">
+<rect width="360" height="220" fill="#ffffff"/>
+<line x1="40" y1="180" x2="345" y2="180" stroke="#475569" stroke-width="1.5"/>
+<line x1="40" y1="20" x2="40" y2="180" stroke="#475569" stroke-width="1.5"/>
+<text x="190" y="205" font-size="12" fill="#475569" text-anchor="middle">time</text>
+<text x="14" y="105" font-size="12" fill="#475569" text-anchor="middle" transform="rotate(-90 14,105)">Q</text>
+<path d="M40,165.4 L44,164.6 L48,163.2 L52,160.8 L56,157.1 L60,151.6 L64,143.8 L68,133.5 L72,120.5 L76,105.1 L80,88.1 L84,70.8 L88,54.7 L92,41.6 L96,33.0 L100,30.0 L104,41.6 L108,52.2 L112,61.9 L116,70.8 L120,78.9 L124,86.4 L128,93.2 L132,99.4 L136,105.1 L140,110.3 L144,115.1 L148,119.4 L152,123.4 L156,127.1 L160,130.4 L164,133.5 L168,136.3 L172,138.8 L176,141.2 L180,143.3 L184,145.3 L188,147.1 L192,148.7 L196,150.2 L200,151.6 L204,152.8 L208,154.0 L212,155.0 L216,156.0 L220,156.9 L224,157.7 L228,158.4 L232,159.1 L236,159.7 L240,160.3 L244,160.8 L248,161.3 L252,161.7 L256,162.1 L260,162.5 L264,162.8 L268,163.1 L272,163.4 L276,163.6 L280,163.9 L284,164.1 L288,164.3 L292,164.5 L296,164.6 L300,164.8 L304,164.9 L308,165.0 L312,165.1 L316,165.2 L320,165.3 L324,165.4 L328,165.5 L332,165.6 L336,165.6 L340,165.7" fill="none" stroke="#dc2626" stroke-width="2.4"/><text x="95" y="40" font-size="12" fill="#dc2626" font-weight="bold">A</text>
+<path d="M40,166.4 L44,166.4 L48,166.4 L52,166.4 L56,166.4 L60,166.4 L64,166.4 L68,166.4 L72,166.4 L76,166.4 L80,166.4 L84,166.4 L88,166.4 L92,166.4 L96,166.4 L100,166.4 L104,166.4 L108,166.4 L112,166.4 L116,166.3 L120,166.3 L124,166.2 L128,166.1 L132,165.8 L136,165.3 L140,164.5 L144,163.1 L148,161.1 L152,158.1 L156,154.0 L160,148.8 L164,142.4 L168,135.0 L172,127.2 L176,119.6 L180,113.0 L184,108.0 L188,105.3 L192,106.6 L196,109.5 L200,112.4 L204,115.1 L208,117.6 L212,120.1 L216,122.4 L220,124.6 L224,126.7 L228,128.7 L232,130.5 L236,132.3 L240,134.0 L244,135.7 L248,137.2 L252,138.6 L256,140.0 L260,141.4 L264,142.6 L268,143.8 L272,144.9 L276,146.0 L280,147.0 L284,148.0 L288,148.9 L292,149.8 L296,150.6 L300,151.4 L304,152.1 L308,152.8 L312,153.5 L316,154.2 L320,154.8 L324,155.4 L328,155.9 L332,156.4 L336,156.9 L340,157.4" fill="none" stroke="#2563eb" stroke-width="2.4"/><text x="235" y="95" font-size="12" fill="#2563eb" font-weight="bold">B</text>
+</svg>`,
+      question: "Two hydrographs from equal-area basins are shown. Which one (A: early sharp peak, B: late broad peak) is the URBANIZED watershed?",
+      options: [
+        "Hydrograph A",
+        "Hydrograph B",
+        "Both identical",
+        "Neither"
+      ],
+      answer: "Hydrograph A",
+      explanation: "Urbanization raises the peak and shortens the time-to-peak (faster response) → the early, sharp curve A.",
+    },
+    {
+      figure: `<svg viewBox="0 0 320 220" style="width:100%;height:auto;max-width:400px;display:block;margin:0 auto">
+<rect width="320" height="220" fill="#ffffff"/>
+<line x1="40" y1="180" x2="300" y2="180" stroke="#475569" stroke-width="1.5"/>
+<line x1="40" y1="20" x2="40" y2="180" stroke="#475569" stroke-width="1.5"/>
+<rect x="46" y="126" width="40" height="54" fill="#93c5fd" stroke="#2563eb"/><rect x="92" y="81" width="40" height="99" fill="#93c5fd" stroke="#2563eb"/><rect x="138" y="45" width="40" height="135" fill="#93c5fd" stroke="#2563eb"/><rect x="184" y="99" width="40" height="81" fill="#93c5fd" stroke="#2563eb"/><rect x="230" y="144" width="40" height="36" fill="#93c5fd" stroke="#2563eb"/>
+<line x1="46" y1="135" x2="276" y2="135" stroke="#dc2626" stroke-width="2.5" stroke-dasharray="6 4"/>
+<text x="280" y="131" font-size="12" fill="#dc2626" font-weight="bold">φ</text>
+<text x="160" y="205" font-size="12" fill="#475569" text-anchor="middle">time</text>
+<text x="14" y="105" font-size="12" fill="#475569" text-anchor="middle" transform="rotate(-90 14,105)">i (mm/h)</text>
+</svg>`,
+      question: "In the φ-index figure, the area of the rainfall bars ABOVE the dashed φ line represents:",
+      options: [
+        "Infiltration losses",
+        "Direct runoff (excess rainfall)",
+        "Base flow",
+        "Evaporation"
+      ],
+      answer: "Direct runoff (excess rainfall)",
+      explanation: "φ is the constant loss rate: rain below φ infiltrates, rain ABOVE φ becomes excess rainfall = direct runoff.",
+    },
+    {
+      figure: `<svg viewBox="0 0 320 220" style="width:100%;height:auto;max-width:400px;display:block;margin:0 auto">
+<rect width="320" height="220" fill="#ffffff"/>
+<line x1="40" y1="180" x2="300" y2="180" stroke="#475569" stroke-width="1.5"/>
+<line x1="40" y1="20" x2="40" y2="180" stroke="#475569" stroke-width="1.5"/>
+<rect x="46" y="126" width="40" height="54" fill="#93c5fd" stroke="#2563eb"/><rect x="92" y="81" width="40" height="99" fill="#93c5fd" stroke="#2563eb"/><rect x="138" y="45" width="40" height="135" fill="#93c5fd" stroke="#2563eb"/><rect x="184" y="99" width="40" height="81" fill="#93c5fd" stroke="#2563eb"/><rect x="230" y="144" width="40" height="36" fill="#93c5fd" stroke="#2563eb"/>
+<line x1="46" y1="135" x2="276" y2="135" stroke="#dc2626" stroke-width="2.5" stroke-dasharray="6 4"/>
+<text x="280" y="131" font-size="12" fill="#dc2626" font-weight="bold">φ</text>
+<text x="160" y="205" font-size="12" fill="#475569" text-anchor="middle">time</text>
+<text x="14" y="105" font-size="12" fill="#475569" text-anchor="middle" transform="rotate(-90 14,105)">i (mm/h)</text>
+</svg>`,
+      question: "In the φ-index figure, the part of each bar BELOW the dashed line corresponds to:",
+      options: [
+        "Excess rainfall",
+        "Direct runoff",
+        "Infiltration / losses",
+        "Peak discharge"
+      ],
+      answer: "Infiltration / losses",
+      explanation: "Everything under the φ line is the constant abstraction (infiltration losses); only the area above contributes to runoff.",
+    },
+    {
+      figure: `<svg viewBox="0 0 360 220" style="width:100%;height:auto;max-width:430px;display:block;margin:0 auto">
+<rect width="360" height="220" fill="#ffffff"/>
+<line x1="40" y1="180" x2="345" y2="180" stroke="#475569" stroke-width="1.5"/>
+<line x1="40" y1="20" x2="40" y2="180" stroke="#475569" stroke-width="1.5"/>
+<line x1="46" y1="172" x2="330" y2="34" stroke="#2563eb" stroke-width="2.2"/>
+<circle cx="54" cy="165" r="3.2" fill="#0f172a"/><circle cx="92" cy="147" r="3.2" fill="#0f172a"/><circle cx="127" cy="130" r="3.2" fill="#0f172a"/><circle cx="170" cy="105" r="3.2" fill="#0f172a"/><circle cx="214" cy="87" r="3.2" fill="#0f172a"/><circle cx="249" cy="75" r="3.2" fill="#0f172a"/><circle cx="286" cy="51" r="3.2" fill="#0f172a"/><circle cx="313" cy="38" r="3.2" fill="#0f172a"/>
+<text x="190" y="205" font-size="12" fill="#475569" text-anchor="middle">reduced variable / non-exceedance prob.</text>
+<text x="14" y="105" font-size="12" fill="#475569" text-anchor="middle" transform="rotate(-90 14,105)">discharge</text>
+</svg>`,
+      question: "On the probability paper, the dots are the sample data and the straight line is the fitted model. The straight line represents the:",
+      options: [
+        "Empirical frequency of the observations",
+        "Theoretical probability distribution function",
+        "IDF curve",
+        "Rating curve"
+      ],
+      answer: "Theoretical probability distribution function",
+      explanation: "Dots = empirical (Weibull) frequencies of observations; the straight line = the fitted theoretical distribution. The closest line wins.",
+    },
+    {
+      figure: `<svg viewBox="0 0 360 220" style="width:100%;height:auto;max-width:430px;display:block;margin:0 auto">
+<rect width="360" height="220" fill="#ffffff"/>
+<line x1="40" y1="180" x2="345" y2="180" stroke="#475569" stroke-width="1.5"/>
+<line x1="40" y1="20" x2="40" y2="180" stroke="#475569" stroke-width="1.5"/>
+<line x1="46" y1="172" x2="330" y2="34" stroke="#2563eb" stroke-width="2.2"/>
+<circle cx="54" cy="165" r="3.2" fill="#0f172a"/><circle cx="92" cy="147" r="3.2" fill="#0f172a"/><circle cx="127" cy="130" r="3.2" fill="#0f172a"/><circle cx="170" cy="105" r="3.2" fill="#0f172a"/><circle cx="214" cy="87" r="3.2" fill="#0f172a"/><circle cx="249" cy="75" r="3.2" fill="#0f172a"/><circle cx="286" cy="51" r="3.2" fill="#0f172a"/><circle cx="313" cy="38" r="3.2" fill="#0f172a"/>
+<text x="190" y="205" font-size="12" fill="#475569" text-anchor="middle">reduced variable / non-exceedance prob.</text>
+<text x="14" y="105" font-size="12" fill="#475569" text-anchor="middle" transform="rotate(-90 14,105)">discharge</text>
+</svg>`,
+      question: "On the probability paper below, the fitted line passes very close to all the plotted points. This means the chosen distribution:",
+      options: [
+        "Fits the sample well",
+        "Fits the sample poorly",
+        "Cannot be assessed",
+        "Has no parameters"
+      ],
+      answer: "Fits the sample well",
+      explanation: "When the theoretical line tracks the empirical dots closely, that distribution is a good fit (lowest deviation) for the sample.",
+    }
+  ]
 }
